@@ -33,6 +33,20 @@ GO
 3. Ejecutar los archivos SQL generados en el paso 1, usando SQL Server Management Studio
 
 
+## Borrar base de datos
+1. Ejecutar el siguiente script usando SQL Server Management Studio
+```
+USE master ;  
+GO  
+DROP DATABASE [ContosoUniversity3];
+GO
+```
+
+## Instalar dotnet ef
+1. Ejecutar el siguiente comando en CMD en Windows:
+```
+dotnet tool install --global dotnet-ef
+```
 ## Referencias
 
 Solución a problema de certificado SSL para GitHub
