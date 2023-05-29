@@ -16,12 +16,17 @@ Sistema Académico para una Universidad
 
 ## Creación de base de datos
 
-1. Generar archivos SQL, ejecutando el siguiente comando en CMD en Windows: 
+1. Crear migración inicial, ejecutando el siguiente comando en CMD en Windows:
+```
+dotnet ef migrations add InitialMigration
+```
+
+2. Generar archivos SQL, ejecutando el siguiente comando en CMD en Windows: 
 ```
 dotnet ef migrations script --idempotent
 ```
 
-2. Crear base de datos usando SQL Server Management Studio
+3. Crear base de datos usando SQL Server Management Studio
 ```
 /* Create database */
 
@@ -30,7 +35,7 @@ CREATE DATABASE [ContosoUniversity3];
 GO
 ```
 
-3. Ejecutar los archivos SQL generados en el paso 1, usando SQL Server Management Studio
+4. Ejecutar los archivos SQL generados en el paso 1, usando SQL Server Management Studio
 
 
 ## Borrar base de datos
