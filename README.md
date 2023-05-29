@@ -37,6 +37,11 @@ GO
 
 4. Ejecutar los archivos SQL generados en el paso 1, usando SQL Server Management Studio
 
+## Actualización de base de datos
+1. Generar un script SQL con los cambios posteriores a la creación inicial de la base de datos, ejecutando el siguiente comando en CMD en Windows:
+```
+dotnet ef migrations script --idempotent InitialMigration
+```
 
 ## Borrar base de datos
 1. Ejecutar el siguiente script usando SQL Server Management Studio
