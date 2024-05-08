@@ -57,6 +57,14 @@ GO
 ```
 dotnet tool install --global dotnet-ef
 ```
+
+## Cadena de conexión de base de datos
+Modificar el archivo Properties/launchSettings.json
+Con Autenticacion de Windows (funciona solo en Windows)
+```
+"DefaultConnection": "Server=localhost;Database=ContosoUniversity3;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=true;"
+```
+
 ## Referencias
 
 Solución a problema de certificado SSL para GitHub
