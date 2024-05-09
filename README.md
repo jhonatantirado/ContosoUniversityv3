@@ -63,3 +63,7 @@ dotnet run --launch-profile https
 Solución a problema de certificado SSL para GitHub
 
 https://stackoverflow.com/questions/58522318/git-error-in-azure-devops-ssl-certificate-problem-self-signed-certificate-in
+
+Configurar profiles en Visual Code
+
+https://kaylumah.nl/2022/06/07/share-debug-configuration-with-launch-profiles.html
