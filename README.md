@@ -6,7 +6,7 @@ Sistema Académico para una Universidad
 
 ## Requisitos:
 
-- .Net Core 7
+- .Net Core 8
 
 - Visual Studio 2022
 
@@ -16,26 +16,14 @@ Sistema Académico para una Universidad
 
 ## Creación de base de datos
 
-1. Crear migración inicial, ejecutando el siguiente comando en CMD en Windows:
-```
-dotnet ef migrations add InitialMigration
-```
-
-2. Generar archivos SQL, ejecutando el siguiente comando en CMD en Windows: 
-```
-dotnet ef migrations script --idempotent
-```
-
-3. Crear base de datos usando SQL Server Management Studio
+1. Crear base de datos usando SQL Server Management Studio
 ```
 /* Create database */
-
 CREATE DATABASE [ContosoUniversity3];
-
 GO
 ```
 
-4. Ejecutar los archivos SQL generados en el paso 1, usando SQL Server Management Studio
+2. Ejecutar el archivo ScriptCreacionBD.sql, usando SQL Server Management Studio.
 
 ## Actualización de base de datos
 1. Generar un script SQL con los cambios posteriores a la creación inicial de la base de datos, ejecutando el siguiente comando en CMD en Windows:
@@ -52,7 +40,7 @@ DROP DATABASE [ContosoUniversity3];
 GO
 ```
 
-## Instalar dotnet ef
+## Instalar dotnet ef (Entity Framework)
 1. Ejecutar el siguiente comando en CMD en Windows:
 ```
 dotnet tool install --global dotnet-ef
@@ -62,6 +50,12 @@ dotnet tool install --global dotnet-ef
 Modificar el archivo Properties/launchSettings.json
 ```
 "DefaultConnection": "Server=localhost;Database=ContosoUniversity3;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=true;"
+```
+
+## Ejecutar aplicación desde línea de comandos
+1. "https" es el nombre del profile que tiene la cadena de conexión DefaultConnection en el archivo Properties/launchSettings.json
+```
+dotnet run --launch-profile https
 ```
 
 ## Referencias
